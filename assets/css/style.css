@@ -54,8 +54,7 @@ a {
 
 h4,
 h5 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 12px 0;
 }
 
 h4 {
@@ -74,7 +73,7 @@ hr {
 
 .container {
     /*    border: 1px solid skyblue;*/
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
 
     /*內容跟設備邊邊的距離*/
@@ -144,11 +143,12 @@ hr {
     .col-md-1-2 {
         width: 50%;
         margin-bottom: 6px;
+        padding: 2px 6px;
     }
 }
 
 @media (max-width: 900px) {
-    .col-lg-1-2 {
+    .col-lg-12 {
         width: 100%;
     }
 }
@@ -160,7 +160,7 @@ hr {
 
     text-align: center;
     font-size: 14px;
-    padding-bottom: 24px;
+    padding: 24px 0;
     line-height: 18px;
 }
 
@@ -282,23 +282,17 @@ hr {
     .navbar .nav.active {
         opacity: 1;
         visibility: visible;
+        padding-top: 64px;
     }
 
     .navbar .nav .nav-item {
         float: none;
     }
 
-    .navbar .dropbtn {
-        visibility: hidden;
+    .navbar .dropdown-content {
+        display: none;
     }
 
-    .navbar .dropdown-content {
-        border: 1px solid skyblue;
-        display: block;
-        width: 100%;
-        height: 100%;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    }
 }
 
 /*三條線在桌機不出現*/
@@ -362,7 +356,7 @@ hr {
 }
 
 /*----------slider*/
-img {
+.slider-images img {
     width: 100%;
 }
 
@@ -376,19 +370,21 @@ img {
 
     margin: 0 auto;
 
-    max-width: 1300px;
+    max-width: 1400px;
     padding-top: 0px;
     padding-bottom: 60px;
-}
-
-.hero.hero4 {
-    padding-bottom: 0px;
 }
 
 /*----------image-container*/
 .image-container {
     /*    border: 1px solid green;*/
     width: 150px;
+    margin: 0 auto;
+}
+
+.image-container.container1 {
+    /*    border: 1px solid green;*/
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -400,24 +396,6 @@ img {
     width: 100%;
     /*因為抓的是上一層的高, 所以不能設定height: 75%*/
     padding-top: 100%;
-
-}
-
-.image-container.container1 {
-    /*    border: 1px solid green;*/
-    width: 100%;
-    margin: 0 auto;
-}
-
-/*推一個1:1的比例出來*/
-.image-container.container1:after {
-    content: "";
-    display: block;
-
-    width: 100%;
-    /*因為抓的是上一層的高, 所以不能設定height: 75%*/
-    padding-top: 100%;
-
 }
 
 /*圖片蓋滿*/
@@ -433,12 +411,16 @@ img {
     background-position: center;
 }
 
-
 .image-container .intro-icon3 {
     border-radius: 50%;
     background-color: white;
 
     transition: all 0.5s;
+}
+
+.intro4-images img {
+    display: inline-block;
+    width: 60%;
 }
 
 /*----------intro*/
@@ -462,15 +444,6 @@ img {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
-/*
-.intro2 {
-    background-image: url(../images/grassfield.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-*/
 
 .intro-item {
     text-align: center;
@@ -545,24 +518,32 @@ img {
 
 }
 
-/*----------svg-logo*/
+/*---------------svg-logo*/
+
 .red-hover,
 .yellow-hover,
 .green-hover,
 .blue-hover {
-    /*    visibility: hidden;*/
     opacity: 0;
-    transition: all 0.4s;
 
+    transition: all 0.4s;
 }
 
 .red:hover .red-hover,
 .yellow:hover .yellow-hover,
 .green:hover .green-hover,
 .blue:hover .blue-hover {
-    /*    visibility: visible;*/
     opacity: 1;
+    display: block;
 }
+
+.red:hover,
+.yellow:hover,
+.green:hover,
+.blue:hover {
+    cursor: pointer;
+}
+
 
 /*----------footer*/
 .footer {
