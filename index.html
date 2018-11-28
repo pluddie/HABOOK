@@ -3,8 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Habook</title>
+    <title>網奕資訊科技集團</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hide this line for IE (needed for Firefox and others) -->
+    <![if !IE]>
+    <link rel="icon" href="assets/images/HABOOK.ico" type="image/x-icon" />
+    <![endif]>
+    <!-- This is needed for IE -->
+    <link rel="shortcut icon" href="assets/images/HABOOK.ico" type="image/icon" />
+
     <link rel="stylesheet" href="assets/vendor/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-grid.css">
@@ -24,8 +32,8 @@
 
                 <ul class="nav" id="popup-nav">
                     <li class="nav-item">
-                        <button class="dropbtn">關於網奕
-                            <i class="fa fa-caret-down"></i>
+                        <button class="dropbtn" onclick="myFunction()">
+                            關於網奕<i class="fa fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
                             <a href="about.html" class="nav-link">關於網奕</a>
@@ -34,16 +42,16 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="dropbtn">智慧教室解決方案
-                            <i class="fa fa-caret-down"></i>
+                        <button class="dropbtn" onclick="myFunction()">
+                            智慧教室解決方案<i class="fa fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
-                            <a href="#" class="nav-link">HiTA智慧教室</a>
-                            <a href="#" class="nav-link">IRS智慧教室</a>
-                            <a href="#" class="nav-link">TBL智慧教室</a>
-                            <a href="#" class="nav-link">移動學習智慧教室</a>
-                            <a href="#" class="nav-link">電子書包智慧教室</a>
-                            <a href="#" class="nav-link">旗艦版智慧教室</a>
+                            <a href="classroom-hita.html" class="nav-link">HiTA智慧教室</a>
+                            <a href="classroom-irs.html" class="nav-link">IRS智慧教室</a>
+                            <a href="classroom-tbl.html" class="nav-link">TBL智慧教室</a>
+                            <a href="classroom-mobile.html" class="nav-link">移動學習智慧教室</a>
+                            <a href="classroom-1-to-1.html" class="nav-link">電子書包智慧教室</a>
+                            <a href="classroom-premium.html" class="nav-link">旗艦版智慧教室</a>
 
                             <hr>
 
@@ -53,8 +61,8 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="dropbtn">網奕動態
-                            <i class="fa fa-caret-down"></i>
+                        <button class="dropbtn" onclick="myFunction()">
+                            網奕動態<i class="fa fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
                             <a href="#" class="nav-link">教育快訊</a>
@@ -64,8 +72,8 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="dropbtn">產品支援
-                            <i class="fa fa-caret-down"></i>
+                        <button class="dropbtn" onclick="myFunction()">
+                            產品支援<i class="fa fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
                             <a href="#" class="nav-link">下載專區</a>
@@ -74,8 +82,8 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="dropbtn">快速上手
-                            <i class="fa fa-caret-down"></i>
+                        <button class="dropbtn" onclick="myFunction()">
+                            快速上手<i class="fa fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
                             <a href="#" class="nav-link">哈部克討論區</a>
@@ -110,16 +118,18 @@
 
         <!--start slider-->
         <div class="hero">
+            <div class="container">
 
-            <div class="slider">
-                <div class="slider-images">
-                    <img src="assets/images/Banner_Sokrates-01.png" alt="">
+                <div class="slider">
+                    <div class="slider-images">
+                        <img src="assets/images/Banner_Sokrates-01.png" alt="">
+                    </div>
+
+                    <div class="slider-images">
+                        <img src="assets/images/Banner_Sokrates-02.png" alt="">
+                    </div>
+
                 </div>
-
-                <div class="slider-images">
-                    <img src="assets/images/Banner_Sokrates-01.png" alt="">
-                </div>
-
             </div>
         </div>
         <!--end slider-->
@@ -130,7 +140,7 @@
 
 
                 <div class="section-intro">
-                    <h3 class="title">幫助每位老師 成就每個孩子</h3>
+                    <h2 class="title">幫助每位老師 成就每個孩子</h2>
                 </div>
 
                 <div class="row">
@@ -150,7 +160,7 @@
                         <div class="intro-item intro1">
                             <div class="image-container container1">
                                 <h4 class="title">智慧教室</h4>
-                                <div class="image intro-icon" style="background-image: url('assets/images/1_products-01.png')">
+                                <div class="image intro-icon" style="background-image: url('assets/images/1_products-02.png')">
                                     <a href="" class=""></a>
                                 </div>
                             </div>
@@ -161,7 +171,7 @@
                         <div class="intro-item intro1">
                             <div class="image-container container1">
                                 <h4 class="title">AI人工智能</h4>
-                                <div class="image intro-icon" style="background-image: url('assets/images/1_products-01.png')">
+                                <div class="image intro-icon" style="background-image: url('assets/images/1_products-03.png')">
                                     <a href="" class=""></a>
                                 </div>
                             </div>
@@ -172,7 +182,7 @@
                         <div class="intro-item intro1">
                             <div class="image-container container1">
                                 <h4 class="title">顧問服務</h4>
-                                <div class="image intro-icon" style="background-image: url('assets/images/1_products-01.png')">
+                                <div class="image intro-icon" style="background-image: url('assets/images/1_products-04.png')">
                                     <a href="" class=""></a>
                                 </div>
                             </div>
@@ -190,14 +200,14 @@
 
                 <div class="intro2">
                     <div class="section-intro">
-                        <h3 class="title">什麼是醍摩豆？</h3>
+                        <h2 class="title">什麼是醍摩豆？</h2>
 
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                         <div class="container svg-logo">
 
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="650px" height="273.13px" viewBox="0 0 1195.984 593.18" enable-background="new 0 0 1195.984 593.18" xml:space="preserve">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="734px" height="364.05px" viewBox="0 0 1195.984 593.18" enable-background="new 0 0 1195.984 593.18" xml:space="preserve">
                                 <g class="tmd-tw">
                                     <path fill="#1A1A1A" d="M523.954,230.183v5.3H513.69v8.327h2.02l2.607-2.859l8.412,2.607l-2.775,2.692v50.052
 			c0.42-1.346,0.841-2.607,1.262-3.869c1.851-5.553,2.103-13.123,2.355-19.012h10.263c-0.842,4.374-2.02,8.58-3.281,12.786
@@ -1489,7 +1499,6 @@
 
             </div>
         </div>
-
         <!--end intro2-->
 
         <!--start intro3-->
@@ -1497,7 +1506,7 @@
             <div class="container">
 
                 <div class="section-intro">
-                    <h3 class="title">為何選擇醍摩豆？</h3>
+                    <h2 class="title">為何選擇醍摩豆？</h2>
                 </div>
 
                 <div class="row">
@@ -1548,32 +1557,36 @@
         </div>
         <!--end intro3-->
 
-    </div>
 
-    <!--start intro4-->
+        <!--start intro4-->
+        <div class="hero hero4">
+            <div class="container">
 
-    <div class="hero hero4">
-        <div class="container">
+                <div class="intro4">
+                    <div class="section-intro">
+                        <h2 class="title">全球影響力</h2>
 
-            <div class="intro4">
-                <div class="section-intro">
-                    <h3 class="title">全球影響力</h3>
-                    <p class="para">網奕資訊科技集團在強大的競爭優勢，以及眾多國內外客戶支持
-                        下，集團得以穩定成長，産品銷售擴及中國大陸、臺灣、香港、
-                        約旦、保加利亞、日本、美國、波蘭、奈及利亞、巴基斯坦、馬
-                        來西亞、越南、巴西、印度…. 等多個國家地區，智慧教室版圖跨
-                        及五大洲，成為世界第一的智慧教育系統品牌。</p>
-                </div>
-                <div class="btn-center">
-                    <a href="#!" class="btn">成功案例</a>
+                        <div class="intro4-images">
+                            <img src="assets/images/5322-01.png" alt="">
+                        </div>
+
+                        <p class="para">網奕資訊科技集團在強大的競爭優勢，以及眾多國內外客戶支持
+                            下，集團得以穩定成長，産品銷售擴及中國大陸、臺灣、香港、
+                            約旦、保加利亞、日本、美國、波蘭、奈及利亞、巴基斯坦、馬
+                            來西亞、越南、巴西、印度…. 等多個國家地區，智慧教室版圖跨
+                            及五大洲，成為世界第一的智慧教育系統品牌。</p>
+
+                        <div class="btn-center">
+                            <a href="#!" class="btn">成功案例</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-
         </div>
+        <!--end intro4-->
+
     </div>
-    <!--end intro4-->
-
-
     <!--end main-->
 
     <!--start footer-->
@@ -1812,7 +1825,6 @@
             autoplaySpeed: 2000,
         });
     });
-
 </script>
 
 </html>
