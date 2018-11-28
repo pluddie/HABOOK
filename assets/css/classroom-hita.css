@@ -1,0 +1,650 @@
+/**
+ * Page name
+ * Copyright 2017
+ * Author
+ * Licensed 
+ */
+/*------------------------------------*\
+    Content
+\*------------------------------------*/
+/**
+ * Content............You're reading it!
+ * Global...............Set common style
+ * Layout...........Set grid
+ * Components...........Set components styles
+ */
+
+
+/*------------------------------------*\
+    Global
+\*------------------------------------*/
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+html,
+body {
+    font-family: '微軟正黑體', sans-serif;
+    font-size: 18px;
+    color: #40414F;
+    background-color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #40414F;
+}
+
+h4,
+h5 {
+    margin: 12px 0;
+}
+
+h4 {
+    color: #40414F;
+}
+
+hr {
+    display: block;
+    width: 80%;
+    border-width: 1px;
+}
+
+/*------------------------------------*\
+    Layout
+\*------------------------------------*/
+
+.container {
+    /*    border: 1px solid skyblue;*/
+    max-width: 1400px;
+    margin: 0 auto;
+
+    /*內容跟設備邊邊的距離*/
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.products {
+    background-color: white;
+    padding: 20px;
+}
+
+.row {
+    /*剪掉下面col多推的padding*/
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+/*清除浮動*/
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col-1-2,
+.col-1-3,
+.col-1-4 {
+    float: left;
+
+    /*做區塊間的gutter*/
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-3 {
+    width: 33.333333%;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-1-5 {
+    width: 20%;
+}
+
+.col-1-6 {
+    width: 16.666666%;
+}
+
+
+
+.col-1-8 {
+    width: 12.5%;
+}
+
+@media (max-width: 800px) {
+    .col-xs-12 {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 920px) {
+    .col-md-1-2 {
+        width: 50%;
+        margin-bottom: 6px;
+        padding: 2px 6px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+.para {
+    /*    border: 1px solid green;*/
+    display: inline-block;
+    width: 80%;
+
+    text-align: left;
+    font-size: 14px;
+    padding: 24px 0;
+    line-height: 18px;
+}
+
+.para.info {
+    font-size: 12px;
+    color: darkgray;
+
+    padding-top: 24px;
+    padding-bottom: 0px;
+}
+
+.case {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.background.bg-case {
+    background-image: url(../images/classroom-hita/6case.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.mask-white {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.vertical-line {
+    border-left: 1px solid gray;
+}
+
+/*------------------------------------*\
+    Components
+\*------------------------------------*/
+
+/*----------nav*/
+.navbar {
+    /*    border: 1px solid skyblue;*/
+    display: inline-block;
+
+    width: 100%;
+    height: 64px;
+
+    background-color: white;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar .logo {
+    /*    border: 1px solid skyblue;*/
+    display: inline-block;
+    float: left;
+
+    background-image: url(../images/habook_short.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 150px;
+    height: 64px;
+}
+
+
+.navbar .nav {
+    float: right;
+}
+
+/*讓item倒回來 (優先向左排列)*/
+.navbar .nav-item {
+    /*    border: 1px solid skyblue;*/
+    float: left;
+    line-height: 64px;
+    padding-left: 20px;
+
+}
+
+.navbar .dropbtn {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-family: inherit;
+    font-size: 16px;
+    color: #40414F;
+}
+
+.navbar .nav .nav-link {
+    /*    border: 1px solid skyblue;*/
+    display: block;
+
+    width: 100%;
+    font-size: 14px;
+    line-height: 36px;
+    padding-left: 20px;
+
+    transition: all 0.3s;
+}
+
+.navbar .nav .nav-link:hover {
+    color: white;
+    background-color: #004ea2;
+}
+
+/* dropdown content (hidden by default) */
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Show dropdown when hover on button */
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 850px) {
+    .navbar .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 500;
+
+        text-align: center;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+    }
+
+    .navbar .nav.active {
+        opacity: 1;
+        visibility: visible;
+        padding-top: 64px;
+    }
+
+    .navbar .nav .nav-item {
+        float: none;
+    }
+
+    .navbar .dropbtn {}
+
+    .navbar .dropdown-content {
+        border: 1px solid skyblue;
+        display: block;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+
+}
+
+/*三條線在桌機不出現*/
+.menu-toggle {
+    display: none;
+    float: right;
+
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    z-index: 501;
+
+    padding: 12px 8px;
+}
+
+.menu-toggle span {
+    width: 32px;
+    height: 2px;
+    display: block;
+    background-color: #004ea2;
+    /*    margin-bottom: 8px;*/
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.3s;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 12px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #004ea2;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 22px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle span:nth-child(3) {
+    top: 32px;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: #004ea2;
+}
+
+@media (max-width:850px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/*----------jumbotron*/
+.jumbotron-images {
+    margin-top: 100px;
+}
+
+.jumbotron-images img {
+    width: 100%;
+}
+
+/*----------hero*/
+.hero {
+    /*    border: 1px solid indianred;*/
+
+    margin: 0 auto;
+
+    max-width: 1400px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+}
+
+.hero.hero1,
+.hero.hero2 {
+    padding-bottom: 0px;
+}
+
+/*----------image-container*/
+.image-container {
+    /*    border: 1px solid green;*/
+    width: 150px;
+    margin: 0 auto;
+}
+
+/*推一個1:1的比例出來*/
+.image-container:after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    /*因為抓的是上一層的高, 所以不能設定height: 75%*/
+    padding-top: 75%;
+}
+
+.image-container.container-lg {
+    /*    border: 1px solid green;*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*推一個1:1的比例出來*/
+.image-container.container-lg:after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    /*因為抓的是上一層的高, 所以不能設定height: 75%*/
+    padding-top: 100%;
+}
+
+/*圖片蓋滿*/
+.image-container .image {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.intro4-images img {
+    display: inline-block;
+    width: 60%;
+}
+
+/*----------intro*/
+.section-intro {
+    display: block;
+    text-align: center;
+}
+
+.section-intro .title {
+    padding: 40px;
+}
+
+.section-intro .title.title-case {
+    padding: 0px;
+}
+
+.subtitle {
+    color: #004ea2;
+}
+
+.intro2 {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.intro-item {
+    /*    border: 1px solid red;*/
+    text-align: center;
+}
+
+.intro-item.intro1 {
+    padding: 15px;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: all 0.3s;
+}
+
+.intro-item.intro1:hover {
+    transform: translate(0, -5px);
+    background-color: #4f4f4f;
+    color: white;
+
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.intro-item.intro1:hover .title {
+    color: white;
+}
+
+
+.intro-product {
+    /*    border: 1px solid skyblue;*/
+    display: inline-block;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    width: 150px;
+    height: 90px;
+}
+
+.intro-product.product1 {
+    background-image: url(../images/classroom-hita/0.%20HABOARD.jpg);
+}
+
+.intro-product.product2 {
+    background-image: url(../images/classroom-hita/0.%20HiTA-tw.png);
+}
+
+/*---------------button*/
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-center .btn {
+    border: 1px solid #004ea2;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-radius: 20px;
+    background-color: #004ea2;
+    color: white;
+    padding: 10px 40px 10px 40px;
+
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    transition: all 0.3s;
+}
+
+.btn-center .btn:hover {
+    border: 1px solid #004ea2;
+
+    background-color: white;
+    color: #004ea2;
+    /*    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);*/
+}
+
+@media (max-width:450px) {
+    .btn-center .btn {
+
+        font-size: 14px;
+        line-height: 24px;
+
+        border-radius: 30px;
+        color: white;
+        padding: 5px 20px 5px 20px;
+        transition: all 0.3s;
+    }
+
+    .btn-center .btn:hover {
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/*----------footer*/
+.footer {
+    padding: 14px;
+    border: 1px solid green;
+    text-align: center;
+    background-color: #004ea2;
+    color: white;
+}
+
+.footer-links {
+    font-size: 12px;
+    color: darkgray;
+}
+
+.footer-links:hover {
+    color: white;
+    transition: all 0.5s;
+}
+
+@media (max-width: 780px) {
+    .col-md-1-4 {
+        width: 25%;
+    }
+}
+
+.social-btns {
+    /*    border: 1px solid white;*/
+    margin-top: 32px;
+}
+
+.icon-btn {
+    font-size: 24px;
+    color: white;
+
+    padding-left: 8px;
+    padding-right: 8px;
+
+    transition: all 0.5s;
+}
+
+.icon-btn:hover {
+    color: darkgray;
+}
