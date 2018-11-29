@@ -164,6 +164,12 @@ hr {
     line-height: 18px;
 }
 
+@media (max-width:500px) {
+    .para {
+        width: 100%;
+    }
+}
+
 .para.info {
     font-size: 12px;
     color: darkgray;
@@ -356,13 +362,15 @@ hr {
 }
 
 /*----------slider*/
+.slider {
+    margin-top: 64px;
+}
+
 .slider-images img {
     width: 100%;
 }
 
-.slider {
-    margin-top: 64px;
-}
+
 
 /*----------hero*/
 .hero {
@@ -373,6 +381,23 @@ hr {
     max-width: 1400px;
     padding-top: 0px;
     padding-bottom: 60px;
+}
+
+.hero.hero1 {
+    max-width: 100%;
+    padding-bottom: 0px;
+
+
+}
+
+.hero.hero4 {
+    padding-bottom: 0px;
+}
+
+@media (max-width: 920px) {
+    .hero {
+        padding-bottom: 0px;
+    }
 }
 
 /*----------image-container*/
@@ -423,6 +448,16 @@ hr {
     width: 60%;
 }
 
+@media (max-width:500px) {
+    .image-container {
+        width: 110px;
+    }
+
+    .intro4-images img {
+        width: 100%;
+    }
+}
+
 /*----------intro*/
 .section-intro {
     display: block;
@@ -433,16 +468,32 @@ hr {
     padding-bottom: 40px;
 }
 
-.intro2 {
-    background-color: white;
+@media (max-width:500px) {
+    .section-intro .title {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+}
+
+.intro,
+.intro-white {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.intro4 {
+
+/*設定白底區塊*/
+.intro-white {
     background-color: white;
-    padding-top: 50px;
-    padding-bottom: 50px;
+}
+
+@media (max-width:500px) {
+
+    .intro,
+    .intro-white {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }
 
 .intro-item {
