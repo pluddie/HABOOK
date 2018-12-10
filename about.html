@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/vendor/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets/vendor/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/vendor/PgwSlider-master/pgwslider.min.css">
 
     <link rel="stylesheet" href="assets/css/about.css">
 </head>
@@ -200,7 +201,8 @@
 
                     <div class="row">
 
-                        <div class="col-1-5 col-md-1-3">
+                        <div class="col-xs-12 col-md-1-3 col-1-5">
+
                             <div class="intro-item">
                                 <div class="image-container">
                                     <div class="image intro-icon3" style="background-image: url('assets/images/about/01.png')">
@@ -210,7 +212,8 @@
                             </div>
                         </div>
 
-                        <div class="col-1-5 col-md-1-3">
+                        <div class="col-xs-12 col-md-1-3 col-1-5">
+
                             <div class="intro-item">
                                 <div class="image-container">
                                     <div class="image intro-icon3" style="background-image: url('assets/images/about/02.png')">
@@ -221,7 +224,8 @@
                             </div>
                         </div>
 
-                        <div class="col-1-5 col-md-1-3">
+                        <div class="col-xs-12 col-md-1-3 col-1-5">
+
                             <div class="intro-item">
                                 <div class="image-container">
                                     <div class="image intro-icon3" style="background-image: url('assets/images/about/03.png')">
@@ -231,7 +235,8 @@
                             </div>
                         </div>
 
-                        <div class="col-1-5 col-md-1-3">
+                        <div class="col-xs-12 col-md-1-3 col-1-5">
+
                             <div class="intro-item">
                                 <div class="image-container">
                                     <div class="image intro-icon3" style="background-image: url('assets/images/about/04.png')">
@@ -241,7 +246,7 @@
                             </div>
                         </div>
 
-                        <div class="col-1-5 col-md-1-3">
+                        <div class="col-xs-12 col-md-1-3 col-1-5">
                             <div class="intro-item">
                                 <div class="image-container">
                                     <div class="image intro-icon3" style="background-image: url('assets/images/about/05.png')">
@@ -257,10 +262,6 @@
         </div>
         <!--end intro2-->
 
-
-
-
-
         <!--start intro3-->
         <div class="intro-white">
 
@@ -271,6 +272,29 @@
                         <h2 class="title title-honor">醍摩豆榮耀光環</h2>
                         <h4 class="subtitle">醍摩豆智慧教育系統與理念全球發酵</h4>
                     </div>
+
+                    <ul class="pgwSlider">
+                        <li>
+                            <img src="assets/images/about/honors/1.jpg">
+                            <span>全球科技領導與教學科技高峰論壇</span>
+                        </li>
+
+                        <li>
+                            <img src=" assets/images/about/honors/2.jpg">
+                            <span>醍摩豆技術創新，受邀至GOOGLE臺北總部</span>
+
+                        </li>
+                        <li>
+                            <img src=" assets/images/about/honors/3.jpg">
+                            <span>醍摩豆投身公益，分享企業資源，獲政府與教育媒體一致好評</span>
+
+                        </li>
+                        <li>
+                            <img src=" assets/images/about/honors/4.jpg">
+                            <span>兩岸智慧好課堂邀請賽－引領全球教師專業發展</span>
+
+                        </li>
+                    </ul>
 
                 </div>
             </div>
@@ -474,8 +498,10 @@
 <!-- lib -->
 <script src="assets/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 <!-- vendor -->
-<script src="assets/vendor/fancybox3/jquery.fancybox.min.js" type="text/javascript"></script>
 <script src="assets/vendor/slick-1.8.1/slick/slick.js" type="text/javascript"></script>
+<script src="assets/vendor/lightslider-master/lightslider.min.js"></script>
+<script src="assets/vendor/PgwSlider-master/pgwslider.min.js"></script>
+
 
 
 <!-- custom -->
@@ -489,23 +515,6 @@
         $('.menu-toggle').removeClass('active');
         $('.navbar .nav').removeClass('active');
     })
-
-    // fancybox3
-    $('[data-fancybox]').fancybox({
-        // Options will go here
-        loop: true,
-        buttons: [
-            "zoom",
-            "share",
-            "slideShow",
-            "fullScreen",
-            "download",
-            "thumbs",
-            "close"
-        ],
-        infobar: false,
-        hideScrollbar: false
-    });
 
     //slider
     $(document).ready(function() {
@@ -527,6 +536,10 @@
         document.getElementById(yearName).style.display = "block";
     }
 
+    //pgwSlider
+    $(document).ready(function() {
+        $('.pgwSlider').pgwSlider();
+    });
 </script>
 
 </html>
