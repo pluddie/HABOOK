@@ -169,6 +169,12 @@ hr {
     }
 }
 
+@media (max-width: 500px) {
+    .col-xs-12 {
+        width: 50%;
+    }
+}
+
 .para {
     /*    border: 1px solid green;*/
     display: inline-block;
@@ -240,20 +246,6 @@ hr {
     Components
 \*------------------------------------*/
 
-/*----------button*/
-
-.button {
-    /*    background-color: #004ea2;*/
-    border-radius: 10px;
-    border: none;
-    color: #40414F;
-    padding: 8px 18px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-}
-
 /*----------nav*/
 .navbar {
     /*    border: 1px solid skyblue;*/
@@ -268,7 +260,7 @@ hr {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 .navbar .logo {
@@ -479,24 +471,49 @@ hr {
 
 .timeline {
     padding-top: 64px;
-    transition: 0.3s;
 }
 
-.timeline h4 {
-    padding: 12px 0 4px 0;
+.tab {
+    /*    border: 2px solid skyblue;*/
+    padding: 4px;
+    width: 160px;
+    transition: all 0.3s;
 }
 
 .timeline-buttons:hover {
     cursor: pointer;
 }
 
-.button:after {
-    content: "";
-    display: block;
-    width: 100px;
-    background-color: red;
+.timeline-buttons h4 {
+    /*    border: 1px solid red;*/
+    font-size: 24px;
+    text-align: center;
 }
 
+.timeline-buttons .tab:hover {
+    color: skyblue;
+}
+
+.button {
+    /*    background-color: #004ea2;*/
+    color: #40414F;
+    display: inline-block;
+}
+
+/*----------pgwSliger*/
+.pgwSlider {
+    margin: 0 auto;
+}
+
+.pgwSlider:before,
+.pgwSlider:after {
+    content: '';
+    display: table;
+}
+
+.pgwSlider:after {
+    clear: both;
+}
 
 /*----------intro*/
 .intro,
